@@ -1,7 +1,6 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_app/homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -71,7 +70,14 @@ class MyApp extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => homepage()
+                          ),
+                        );
+                      },
                       elevation: 0.0,
                     ),
                   )
