@@ -1,30 +1,43 @@
 import 'package:flutter/material.dart';
 
-class homepage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SafeArea(
           child: Scaffold(
-        body: ListView(
+        body: Column(
           children: <Widget>[
             Container(
-//              height: MediaQuery.of(context).size.height,
-//              width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.all(5.0),
+              color: Colors.blue[600],
+//              height: MediaQuery.of(context).size.height / 3.4,
+              width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Image(image: AssetImage('images/foodlogo.png')),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 5.0,right: 10.0),
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: Image(
+                        image: AssetImage('images/foodlogo.png'),
+                        width: 100.0,
+                        height: 50.0,
+                      ),
+                    ),
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 50.0,
                   ),
+                 ListView(
+                   scrollDirection: Axis.horizontal,
+                   children: <Widget>[
+                     
+                   ],
+                 )
                 ],
               ),
-            )
+            ),
           ],
         ),
       )),

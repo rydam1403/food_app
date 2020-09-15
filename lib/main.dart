@@ -3,17 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:food_app/homepage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+      MaterialApp(
+          title: 'Food App',
+          debugShowCheckedModeBanner: false,
+          color: Colors.green,
+          home: MyApp()
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Food App',
-      debugShowCheckedModeBanner: false,
-      color: Colors.green,
-      home: SafeArea(
+    return  SafeArea(
           child: Scaffold(
               backgroundColor: Colors.white,
               body: ListView(
@@ -74,7 +77,7 @@ class MyApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => homepage()
+                              builder: (context) { return HomePage();}
                           ),
                         );
                       },
@@ -82,8 +85,7 @@ class MyApp extends StatelessWidget {
                     ),
                   )
                 ],
-              ))),
-    );
+              )));
   }
 
   Widget Fieldinput({String type, TextInputType texttype}) => Container(
