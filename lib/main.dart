@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
                     Container(
                       margin: EdgeInsets.only(top: 30.0, bottom: 50.0),
                       child: Center(
-                        child: Image(image: AssetImage('images/foodlogo.png')),
+                        child: Image(image: AssetImage('images/foodlogo.png'),height: MediaQuery.of(context).size.height/7,),
                       ),
                     ),
                     SizedBox(
@@ -58,12 +58,15 @@ class _MyAppState extends State<MyApp> {
                           type: 'User Name',
                           texttype: TextInputType.text,
                         ),
+                        SizedBox(height: 20.0,),
                         Fieldinput(
                             type: 'Email',
                             texttype: TextInputType.emailAddress),
+                        SizedBox(height: 20.0,),
                         Fieldinput(
                             type: 'Password',
                             texttype: TextInputType.visiblePassword),
+                        SizedBox(height: 20.0,),
                         Fieldinput(
                             type: 'Phone', texttype: TextInputType.number)
                       ],

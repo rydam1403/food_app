@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context).size.height / 3.4,
+            height: MediaQuery.of(context).size.height / 2.9,
             decoration: BoxDecoration(
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.only(
@@ -124,455 +124,19 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            width: MediaQuery.of(context).size.width / 1.1,
-            margin: EdgeInsets.only(left: 30.0, right: 30.0),
-            child: Card(
-              elevation: 2.0,
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 5.0, left: 12.0, bottom: 5.0),
-                                child: CircleAvatar(
-                                  radius: 20.0,
-                                  backgroundImage:
-                                      AssetImage('images/vchef.jfif'),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Text(
-                                'Olea Powers',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.0,
-                                ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 3.0),
-                                child: Icon(
-                                  Icons.favorite,
-                                  color: Colors.red,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 5.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 3.0, right: 15.0),
-                                child: Text(
-                                  '160',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 3.0,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      width: MediaQuery.of(context).size.width,
-                      child: Image(image: AssetImage('images/plook.png')),
-                    ),
-                    SizedBox(
-                      height: 3.0,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      child: Column(
-                        children: [
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 5.0),
-                            child: Text(
-                              'Pizza Margherita',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18.0,
-                                letterSpacing: 1.2,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 5.0),
-                            child: rate(s: 4),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
+          dishCard(context: context),
           SizedBox(
             height: 30.0,
           ),
-          Container(
-            width: MediaQuery.of(context).size.width / 1.1,
-            margin: EdgeInsets.only(left: 30.0, right: 30.0),
-            child: Card(
-              elevation: 2.0,
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 5.0, left: 12.0, bottom: 5.0),
-                                child: CircleAvatar(
-                                  radius: 20.0,
-                                  backgroundImage:
-                                      AssetImage('images/vchef.jfif'),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Text(
-                                'Olea Powers',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.0,
-                                ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 3.0),
-                                child: Icon(
-                                  Icons.favorite,
-                                  color: Colors.red,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 5.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 3.0, right: 15.0),
-                                child: Text(
-                                  '160',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 3.0,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      width: MediaQuery.of(context).size.width,
-                      child: Image(image: AssetImage('images/plook.png')),
-                    ),
-                    SizedBox(
-                      height: 3.0,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      child: Column(
-                        children: [
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 5.0),
-                            child: Text(
-                              'Pizza Margherita',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18.0,
-                                letterSpacing: 1.2,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 5.0),
-                            child: rate(s: 4),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
+          dishCard(context: context),
           SizedBox(
             height: 30.0,
           ),
-          Container(
-            width: MediaQuery.of(context).size.width / 1.1,
-            margin: EdgeInsets.only(left: 30.0, right: 30.0),
-            child: Card(
-              elevation: 2.0,
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 5.0, left: 12.0, bottom: 5.0),
-                                child: CircleAvatar(
-                                  radius: 20.0,
-                                  backgroundImage:
-                                      AssetImage('images/vchef.jfif'),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Text(
-                                'Olea Powers',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.0,
-                                ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 3.0),
-                                child: Icon(
-                                  Icons.favorite,
-                                  color: Colors.red,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 5.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 3.0, right: 15.0),
-                                child: Text(
-                                  '160',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 3.0,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      width: MediaQuery.of(context).size.width,
-                      child: Image(image: AssetImage('images/plook.png')),
-                    ),
-                    SizedBox(
-                      height: 3.0,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      child: Column(
-                        children: [
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 5.0),
-                            child: Text(
-                              'Pizza Margherita',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18.0,
-                                letterSpacing: 1.2,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 5.0),
-                            child: rate(s: 4),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
+          dishCard(context: context),
           SizedBox(
             height: 30.0,
           ),
-          Container(
-            width: MediaQuery.of(context).size.width / 1.1,
-            margin: EdgeInsets.only(left: 30.0, right: 30.0),
-            child: Card(
-              elevation: 2.0,
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(
-                                    top: 5.0, left: 12.0, bottom: 5.0),
-                                child: CircleAvatar(
-                                  radius: 20.0,
-                                  backgroundImage:
-                                      AssetImage('images/vchef.jfif'),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Text(
-                                'Olea Powers',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16.0,
-                                ),
-                              )
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 3.0),
-                                child: Icon(
-                                  Icons.favorite,
-                                  color: Colors.red,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 5.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 3.0, right: 15.0),
-                                child: Text(
-                                  '160',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 3.0,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      width: MediaQuery.of(context).size.width,
-                      child: Image(image: AssetImage('images/plook.png')),
-                    ),
-                    SizedBox(
-                      height: 3.0,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.grey[400], width: 1.5)),
-                      child: Column(
-                        children: [
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 5.0),
-                            child: Text(
-                              'Pizza Margherita',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18.0,
-                                letterSpacing: 1.2,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 5.0),
-                            child: rate(s: 4),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
+          dishCard(context: context),
         ],
       ),
     ));
@@ -637,5 +201,118 @@ class HomePage extends StatelessWidget {
         color: Colors.yellow,
         borderColor: Colors.grey,
         spacing: 0.0);
+  }
+
+  dishCard({BuildContext context}){
+    return Container(
+      width: MediaQuery.of(context).size.width / 1.1,
+      margin: EdgeInsets.only(left: 30.0, right: 30.0),
+      child: Card(
+        elevation: 2.0,
+        child: Container(
+          decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.grey,
+              )),
+          child: Column(
+            children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                    border:
+                    Border.all(color: Colors.grey[400], width: 1.5)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(
+                              top: 5.0, left: 12.0, bottom: 5.0),
+                          child: CircleAvatar(
+                            radius: 20.0,
+                            backgroundImage:
+                            AssetImage('images/vchef.jfif'),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text(
+                          'Olea Powers',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 3.0),
+                          child: Icon(
+                            Icons.favorite,
+                            color: Colors.red,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5.0,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 3.0, right: 15.0),
+                          child: Text(
+                            '160',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 3.0,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    border:
+                    Border.all(color: Colors.grey[400], width: 1.5)),
+                width: MediaQuery.of(context).size.width,
+                child: Image(image: AssetImage('images/plook.png')),
+              ),
+              SizedBox(
+                height: 3.0,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    border:
+                    Border.all(color: Colors.grey[400], width: 1.5)),
+                child: Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      margin: EdgeInsets.only(left: 5.0),
+                      child: Text(
+                        'Pizza Margherita',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.0,
+                          letterSpacing: 1.2,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      margin: EdgeInsets.only(left: 5.0),
+                      child: rate(s: 4),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
