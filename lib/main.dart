@@ -94,6 +94,12 @@ class MyApp extends StatelessWidget {
             decoration: InputDecoration(
               filled: true,
               fillColor: Colors.grey[300],
+              enabledBorder: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(50.0)
+                ),
+                borderSide: const BorderSide(color: Colors.grey,width: 0.0),
+              ),
               labelText: '$type',
               labelStyle: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -108,7 +114,7 @@ class MyApp extends StatelessWidget {
               ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30.0),
-              ),
+              )
             ),
             keyboardType: texttype,
           ),
